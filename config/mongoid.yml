@@ -1,0 +1,6 @@
+development:
+  sessions:
+    default:
+      database: delayed_job
+      hosts:
+        - localhost:27017
