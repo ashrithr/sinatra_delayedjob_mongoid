@@ -10,9 +10,13 @@ namespace :jobs do
     Delayed::Job.delete_all
   end
 
+  desc 'delayed_job create indexes'
+  task :create_indexes => :environment do
+    Delayed::Backend::Mongoid::Job.create_indexes
+  end
+
   desc 'delayed_job worker process'
   task :work => :environment do
-    Delayed::Backend::Mongoid::Job.create_indexes
     Delayed::Worker.new(:min_priority => ENV['MIN_PRIORITY'], :max_priority => ENV['MAX_PRIORITY']).start
   end
 end

@@ -12,6 +12,12 @@ Start sinatra application:
 rackup
 ```
 
+Index collection used by `delayed_job`:
+
+```
+bundle exec rake jobs:create_indexes
+```
+
 Start `delayed_job` process:
 
 ```
