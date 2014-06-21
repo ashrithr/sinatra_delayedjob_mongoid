@@ -10,6 +10,9 @@ GEM
     bson_ext (1.10.2)
       bson (~> 1.10.2)
     builder (3.0.4)
+    clockwork (0.7.5)
+      activesupport
+      tzinfo
     daemons (1.1.9)
     delayed_job (4.0.1)
       activesupport (>= 3.0, < 4.2)
@@ -50,6 +53,7 @@ PLATFORMS
 
 DEPENDENCIES
   bson_ext
+  clockwork
   delayed_job
   delayed_job_mongoid
   mongo
